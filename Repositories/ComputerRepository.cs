@@ -59,6 +59,7 @@ class ComputerRepository
         return computer;
     }
 
+    // Método Delete
     public void Delete(int id)
     {
         var connection = new SqliteConnection(_databaseConfig.ConnectionString);
