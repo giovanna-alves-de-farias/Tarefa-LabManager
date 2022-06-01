@@ -18,35 +18,38 @@ Aplicação para cadastro e leitura de computadores e laboratórios em um banco 
 
 Utilize o comando a seguir para baixar o repositório na sua máquina:
 
-git clone https://github.com/giovanna-alves-de-farias/LabManager.git`
+`git clone https://github.com/giovanna-alves-de-farias/LabManager.git`
 
 Use os comandos a seguir para manipular a aplicação:
 
 ## Computadores
 
-CREATE, Substitua os valores para inserir novas tuplas na tabela:
+Troque os valores para adicionar novas tuplas na tabela:
 
-dotnet run -- Computer New id ram processador
+`dotnet run -- Computer New id ram processor`
 
-READ, liste utilizando:
+Para exibir a lista:
 
-dotnet run -- Computer List
-READ (single), obtenha um computador específico utilizando:
+`dotnet run -- Computer List`
 
-dotnet run -- Computer Show id
-UPDATE, atualize um computador específico utilizando:
+Acesse um determinado computador:
 
-dotnet run -- Computer Update id ram processador
-DELETE, remova um computador específico utilizando:
+`dotnet run -- Computer Show id`
 
-dotnet run -- Computer Delete id
+Para atualizar um determinado computador:
+
+`dotnet run -- Computer Update id ram processador`
+
+Excluir um determinado computador:
+
+`dotnet run -- Computer Delete id`
 
 ## Laboratórios
 
-CREATE, Substitua os valores para inserir novas tuplas na tabela:
+Troque os valores para adicionar novas tuplas na tabela:
 
-dotnet run -- Lab New id number name block
+`dotnet run -- Lab New id number name block`
 
-READ, liste utilizando:
+Para exibir a lista:
 
-dotnet run -- Lab List
+`dotnet run -- Lab List`
