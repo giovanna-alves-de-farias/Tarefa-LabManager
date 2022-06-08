@@ -18,7 +18,7 @@ Aplicação para cadastro e leitura de computadores e laboratórios em um banco 
 
 Utilize o comando a seguir para baixar o repositório na sua máquina:
 
-`git clone https://github.com/giovanna-alves-de-farias/LabManager.git`
+`git clone https://github.com/giovanna-alves-de-farias/Tarefa-LabManager.git`
 
 Use os comandos a seguir para manipular a aplicação:
 
