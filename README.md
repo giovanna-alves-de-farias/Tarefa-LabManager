@@ -12,7 +12,8 @@ Aplicação para cadastro e leitura de computadores e laboratórios em um banco 
 
 ## Tecnologias 
 
-.NET 6.0
+- .NET 6.0
+- C#
 
 ## Uso
 
