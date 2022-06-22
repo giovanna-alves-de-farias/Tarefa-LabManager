@@ -34,6 +34,7 @@ if(modelName == "Computer")
         var computer = new Computer(id, ram, processor);
         computerRepository.Save(computer);
     }
+
     if (modelAction == "Update")
     {
         var id = Convert.ToInt32(args[2]);
@@ -42,6 +43,7 @@ if(modelName == "Computer")
         var computer = new Computer(id, ram, processor);
         computerRepository.Update(computer);
     }
+    
     if(modelAction == "Delete")
     {
         var id = Convert.ToInt32(args[2]);
@@ -89,7 +91,7 @@ if(modelName == "Lab")
     if (modelAction == "New")
     {
         var id = Convert.ToInt32(args[2]);
-        var number = Convert.ToInt32(args[3]);
+        int number = Convert.ToInt32(args[3]);
         var name = args[4];
         var block = Convert.ToChar(args[5]);
 

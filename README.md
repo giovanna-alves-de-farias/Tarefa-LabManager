@@ -12,9 +12,9 @@ Aplicação para cadastro e leitura de computadores e laboratórios em um banco 
 
 ## Tecnologias 
 
-- .NET 6.0
+- .NET 6.0.3
 - C#
-- Dapper 2.0
+- Dapper 2.0.123
 - Sqlite
 
 ## Uso
@@ -27,15 +27,15 @@ Use os comandos a seguir para manipular a aplicação:
 
 ## Computadores
 
-Troque os valores para adicionar novas tuplas na tabela:
+Para trocar os valores para adicionar novas tuplas na tabela:
 
 `dotnet run -- Computer New id ram processor`
 
-Para exibir a lista:
+Para exibir a lista de computadores:
 
 `dotnet run -- Computer List`
 
-Acesse um determinado computador:
+Para acessar um determinado computador:
 
 `dotnet run -- Computer Show id`
 
@@ -43,16 +43,28 @@ Para atualizar um determinado computador:
 
 `dotnet run -- Computer Update id ram processador`
 
-Excluir um determinado computador:
+Para excluir um determinado computador:
 
 `dotnet run -- Computer Delete id`
 
 ## Laboratórios
 
-Troque os valores para adicionar novas tuplas na tabela:
+Para trocar os valores para adicionar novas tuplas na tabela:
 
 `dotnet run -- Lab New id number name block`
 
-Para exibir a lista:
+Para exibir a lista de laboratórios:
 
 `dotnet run -- Lab List`
+
+Para acessar um determinado laboratório:
+
+`dotnet run -- Lab Show id`
+
+Para atualizar um determinado laboratório:
+
+`dotnet run -- Lab Update id ram processador`
+
+Para excluir um determinado laboratório:
+
+`dotnet run -- Lab Delete id`

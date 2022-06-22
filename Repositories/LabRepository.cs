@@ -4,15 +4,17 @@ using LabManager.Database;
 using Dapper;
 
 namespace LabManager.Repositories;
+
 class LabRepository
 {
     private readonly DatabaseConfig _databaseConfig;
+
     public LabRepository(DatabaseConfig databaseConfig)
     {
         _databaseConfig = databaseConfig;
     }
     
-    public List<Lab> GetAll()
+    public IEnumerable<Lab> GetAll()
     {
         var labs = new List<Lab>();
 
@@ -27,15 +29,16 @@ class LabRepository
         while (reader.Read())
         {
             var id = reader.GetInt32(0);
-            var number = reader.GetString(1);
+            int number = reader.GetInt32(1);
             var name = reader.GetString(2);
-            var block = reader.GetString(3);
+            char block = reader.GetChar(3);
             var lab = new Lab(id, number, name, block);
             labs.Add(lab); 
         }
         connection.Close();
         return labs;
     }
+    
     public Lab Save(Lab lab)
     {
         var connection = new SqliteConnection(_databaseConfig.ConnectionString);
@@ -105,9 +108,9 @@ class LabRepository
         var reader = command.ExecuteReader();
         reader.Read();
 
-        var number = reader.GetString(1);
+        int number = reader.GetInt32(1);
         var name = reader.GetString(2);
-        var block = reader.GetString(3);
+        char block = reader.GetChar(3);
         var lab = new Lab(id, number, name, block);
 
         connection.Close();
@@ -121,7 +124,7 @@ class LabRepository
 
     private Lab ReaderToLab(SqliteDataReader  reader)
     {
-        var lab = new Lab(reader.GetInt32(0), reader.GetString(1), reader.GetString(2),  reader.GetChar(3));
+        var lab = new Lab(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2),  reader.GetChar(3));
         return lab;
     }
 
