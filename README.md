@@ -14,6 +14,8 @@ Aplicação para cadastro e leitura de computadores e laboratórios em um banco 
 
 - .NET 6.0
 - C#
+- Dapper 2.0
+- Sqlite
 
 ## Uso
 
