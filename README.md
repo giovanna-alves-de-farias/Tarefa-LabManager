@@ -6,9 +6,9 @@ Aplicação para cadastro e leitura de computadores e laboratórios em um banco 
 
 - Realiza o cadastro de computadores e laboratórios
 - Exibe uma lista de computadores e laboratórios
-- Mostra um computador por ID
-- Eliminação de um computador
-- Atualizar um computador
+- Exibe um computador e um laboratório por ID
+- Eliminação de um computador e um laboratório
+- Atualiza um computador e um laboratório
 
 ## Tecnologias 
 
