@@ -27,9 +27,9 @@ class ComputerRepository
 
         while(reader.Read())
         {
-            var id = reader.GetInt32(0);
-            var ram = reader.GetString(1);
-            var processor = reader.GetString(2);
+            //var id = reader.GetInt32(0);
+            //var ram = reader.GetString(1);
+            //var processor = reader.GetString(2);
 
             //var computer = new Computer(id, ram, processor);
             // var computer = new Computer(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
@@ -37,15 +37,9 @@ class ComputerRepository
             computers.Add(computer);
 
         }
-
+        reader.Close();
         connection.Close();
-
         return computers;
-    }
-
-    internal bool ExitsById(int id)
-    {
-        throw new NotImplementedException();
     }
 
     public Computer Save(Computer computer)
@@ -129,7 +123,7 @@ class ComputerRepository
         connection.Open();
 
         var command = connection.CreateCommand();
-        command.CommandText = "SELECT count(id) FROM Computers WHERE (id = $id)";
+        command.CommandText = "SELECT COUNT(id) FROM Computers WHERE (id = $id)";
         command.Parameters.AddWithValue("$id", id); 
 
         var reader = command.ExecuteReader();
